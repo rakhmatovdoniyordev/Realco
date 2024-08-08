@@ -1,0 +1,26 @@
+.footer{
+    background: #bdbdbd;
+    .footer__wrapper{
+        @include df(flex, space-between, center, none, none);
+        padding: 24px 0;
+        .footer__left{
+            font-size: 14px;
+            font-family: $font;
+            color: $font-by;
+            font-weight: 400;
+        }
+        .footer__right{
+            @include df(flex, center, center, 12px, none);
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .footer{
+        .footer__wrapper{
+            @include df(flex, none, center, 10px, column);
+            padding: 24px 0;
+
+        }
+    }
+}

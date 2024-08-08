@@ -1,0 +1,119 @@
+.hero{
+    background: #F5F5F2;
+    .hero__wrapper{
+        display: flex;
+        gap: 124px;
+        align-items: center;
+        .hero__text{
+            @include df(flex, none, none, 20px, column);
+            .hero__search{
+                @include df(flex, none, none, 34px, row);
+                .hero__input{
+                    @include df(flex, center, center, 16px, row);
+                    background: #fff;
+                    border-radius: 6px;
+                    border: 1px solid #E7E8E3;
+                    box-shadow: 0px 2px 4px 0px #00000014;
+                    padding-left: 16px;
+                    cursor: text;
+                    input{
+                        border: none;
+                        font-size: 20px;
+                        color: #65665C;
+                        font-weight: 400;
+                        font-family: $font;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1050px) {
+    .hero{
+        .hero__wrapper{
+            .hero__text{
+                .hero__search{
+                    .btn-main{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 990px) {
+    .hero{
+        .hero__wrapper{
+            flex-wrap: wrap;
+            justify-content: center;
+            .hero__text{
+                align-items: center;
+                padding-top: 30px;
+                .hero__search{
+                    .btn-main{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 650px) {
+    .hero{
+        .hero__wrapper{
+            gap: 40px;
+            .hero__text{
+                .subtitle{
+                    font-size: 12px;
+                }
+                .t
+                .title{
+                    font-size: 28px;
+                }
+                .desc{
+                    font-size: 14px;
+                    text-align: center;
+                }
+                .hero__search{
+                    .btn-main{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 450px) {
+    .hero{
+        .hero__wrapper{
+            gap: 35px;
+            .hero__text{
+                .subtitle{
+                    font-size: 8px;
+                    padding: 3px 6px;
+                }
+                .title{
+                    font-size: 28px;
+                    text-align: center;
+                }
+                .desc{
+                    font-size: 14px;
+                    text-align: center;
+                }
+                .hero__search{
+                    gap: 14px;
+                    .hero__input{
+                        gap: 8px;
+                        padding-left: 6px;
+                    }
+                    .btn-main{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

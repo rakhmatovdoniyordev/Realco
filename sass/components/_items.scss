@@ -1,0 +1,124 @@
+.items{
+    margin-top: 200px;
+    .items__wrapper{
+        @include df(flex, none, center, 160px, none);
+        .items__text, .items__image{
+            width: calc(50% - 80px);
+        }
+        .items__text{
+            @include df(flex, center, none, 25px, column);
+            .items__icons{
+                @include df(flex, none, none, 40px, none);
+                .items__left, .items__right{
+                    .title{
+                        font-size: 20px;
+                        margin: 16px 0;
+                    }
+                }
+            }
+            .items__buttons{
+                display: flex;
+                gap: 24px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 990px) {
+    .items{
+        margin-top: 150px;
+        .items__wrapper{
+            gap: 100px;
+            flex-direction: column;
+            .items__text, .items__image{
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    .items__wrapper.reverse{
+        flex-direction: column-reverse;
+    }
+}
+@media (max-width: 800px) {
+    .items{
+        margin-top: 120px;
+        .items__wrapper{
+            gap: 80px;
+            .items__text, .items__image{
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+            .items__text{
+                .subtitle{
+                    font-size: 14px;
+                }
+                .title{
+                    font-size: 24px;
+                }
+                .desc{
+                    font-size: 14px;
+                }
+                .items__buttons{
+                    button{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 550px) {
+    .items{
+        margin-top: 70px;
+        .items__wrapper{
+            gap: 30px;
+            .items__text{
+                gap: 12px;
+                .subtitle{
+                    font-size: 10px;
+                }
+                .title{
+                    font-size: 20px;
+                }
+                .desc{
+                    font-size: 12px;
+                }
+                .items__buttons{
+                    button{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 350px) {
+    .items{
+        margin-top: 50px;
+        .items__wrapper{
+            gap: 20px;
+            .items__text{
+                gap: 10px;
+                .subtitle{
+                    font-size: 9px;
+                }
+                .title{
+                    font-size: 18px;
+                }
+                .desc{
+                    font-size: 10px;
+                }
+                .items__buttons{
+                    button{
+                        font-size: 10px;
+                        padding: 8px 14px;
+                    }
+                }
+            }
+        }
+    }
+}

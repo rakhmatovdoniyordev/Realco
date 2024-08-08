@@ -1,0 +1,38 @@
+
+
+@mixin button($bg, $clr, $p, $sz, $bsh, $bdr){
+    background: $bg;
+    border-radius: 6px;
+    color: $clr;
+    padding: $p;
+    font-family: $font;
+    font-size: $sz;
+    font-weight: 400;
+    box-shadow: $bsh;
+    border: $bdr;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+@mixin df($f,$jc, $ai, $g, $fd){
+    display: $f;
+    justify-content: $jc;
+    align-items: $ai;
+    gap: $g;
+    flex-direction: $fd;
+}
+
+
+.btn-main{
+    @include button(#CF6F49, #fff, 10px 21px, 16px, none, none);
+}
+.btn-second{
+    @include button(#fff, #000, 10px 21px, 16px, 0px 2px 4px 0px #00000014, 1px solid #E7E8E3);
+}
+.btn-wht{
+    @include button( #fff, #2A2C1F, 13px 25px, 16px, 0px 2px 4px 0px #00000014, 1px solid #E7E8E3);
+}
+.btn-trn{
+    @include button( transparent, #2A2C1F, none, 16px, none, none)
+}

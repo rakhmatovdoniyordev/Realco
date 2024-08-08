@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1312px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+li{
+    list-style: none;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+.subtitle{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $font;
+    color: #2A2C1F;
+    background: #E7E8E3;
+    padding: 5px 12px;
+    border-radius: 32px;
+    width: 30%;
+    text-align: center;
+}
+.title{
+    font-size: 56px;
+    font-family: $font;
+    font-weight: 400;
+    color: #2A2C1F;
+}
+.desc{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: $font;
+    color: #65665C;
+}

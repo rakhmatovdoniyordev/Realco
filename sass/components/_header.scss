@@ -1,0 +1,100 @@
+.navbar{
+    @include df(flex, space-between, center, none, none);
+    height: 74px;
+    .navbar__logo{
+        cursor: pointer;
+        flex: 1;
+    }
+    .navbar__collection{
+        @include df(flex, center, center, 32px, none);
+        font-family: $font;
+        margin-right: 32px;
+        .navbar__item{
+            select{
+                outline: none;
+                border: none;
+                font-family: $font;
+                font-size: 16px;
+                cursor: pointer;
+                option{
+                    font-family: $font;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .navbat__buttons{
+        @include df(flex, center, center, 16px, none);
+    }
+}
+
+
+@media (max-width:990px) {
+    .navbar{
+        .navbar__collection{
+            font-size: 12px;
+            .navbar__item{
+                select{
+                    font-size: 12px;
+                    cursor: pointer;
+                    option{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:800px) {
+    .navbar{
+        .navbar__collection{
+            display: none;
+        }
+
+    }
+}
+@media (max-width:700px) {
+    .navbar{
+        .navbar__collection{
+            display: none;
+        }
+        .btn-main{
+            @include button(#CF6F49, #fff, 6px 14px, 14px, none, none);
+        }
+        .btn-second{
+            @include button(#fff, #000, 6px 14px, 14px, 0px 2px 4px 0px #00000014, 1px solid #E7E8E3);
+        }
+    }
+}
+@media (max-width:450px) {
+    .navbar{
+        .navbar__logo{
+            img{
+                width: 50%;
+                height: 50%;
+            }
+        }
+        .btn-main{
+            @include button(#CF6F49, #fff, 4px 10px, 12px, none, none);
+        }
+        .btn-second{
+            @include button(#fff, #000, 4px 10px, 12px, 0px 2px 4px 0px #00000014, 1px solid #E7E8E3);
+        }
+    }
+}
+@media (max-width:350px) {
+    .navbar{
+        .navbar__logo{
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+        .btn-main{
+            @include button(#CF6F49, #fff, 4px 10px, 12px, none, none);
+        }
+        .btn-second{
+            @include button(#fff, #000, 4px 10px, 12px, 0px 2px 4px 0px #00000014, 1px solid #E7E8E3);
+        }
+    }
+}

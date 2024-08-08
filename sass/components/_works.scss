@@ -1,0 +1,70 @@
+.works__title{
+    text-align: center;
+    margin-top: 120px;
+    @include df(flex, center, center, 21px, column);
+}
+.works__wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+    margin-top: 64px;
+    .works__card{
+        border: 1px solid #E7E8E3;
+        box-shadow: 0px 2px 4px 0px #00000014;
+        @include df(flex, center, center, 24px, column);
+        padding: 49px 34px;
+        border-radius: 16px;
+        .works__card-title{
+            font-size: 24px;
+            font-weight: 700;
+            font-family: $font;
+            color: $font-py;
+        }
+        .works__card-desc{
+            text-align: center;
+            font-family: $font;
+            font-weight: 400;
+            color: $font-by;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .works__wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media (max-width: 650px) {
+    .works__title{
+        margin-top: 40px;
+    }
+    .works__wrapper{
+        margin-top: 40px;
+        grid-template-columns: 1fr;
+        .works__card{
+            padding: 28px 18px;
+            .works__card-title{
+                font-size: 20px;
+            }
+            .works__card-desc{
+                font-size: 13px;
+            }
+        }
+    }
+
+}
+@media (max-width: 450px) {
+    .works__title{
+        .title{
+            font-size: 28px;
+        }
+        .desc{
+            font-size: 14px;
+        }
+    }
+    .works__wrapper{
+        grid-template-columns: 1fr;
+    }
+
+}
